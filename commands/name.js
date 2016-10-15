@@ -13,7 +13,7 @@ const suffixes = [
 const prefixes = [
   "Lil'",
   'Peg-legged',
-  'Two-Legged'
+  'Two-Legged',
   'One-Eyed',
   'Two-Eyed',
   'Four-Eyed',

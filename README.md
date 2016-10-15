@@ -1,6 +1,13 @@
 # Pirate Joe
 
+[![Build Status][travis-image]][travis-url]
+[![Coverage Status][coveralls-image]][coveralls-url]
+[![js-standard-style][standard-image]][standard-url]
+[![standard-version][standard-version-image]][standard-version-url]
+
 Yargs' slack-bot Pirate Joe, the eternal optimist.
+
+![Joe was one optimistic pirate.](http://i.imgur.com/4WFGVJ9.png)
 
 ## Building Slack a Slack-Bot with Yargs
 
@@ -21,3 +28,12 @@ chat-bot up in running in Slack using yargs.
 ## License
 
 ISC
+
+[travis-url]: https://travis-ci.org/yargs/pirate-joe
+[travis-image]: https://img.shields.io/travis/yargs/pirate-joe/master.svg
+[coveralls-url]: https://coveralls.io/github/yargs/pirate-joe
+[coveralls-image]: https://img.shields.io/coveralls/yargs/pirate-joe.svg
+[standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg
+[standard-url]: http://standardjs.com/
+[standard-version-image]: https://img.shields.io/badge/release-standard%20version-brightgreen.svg
+[standard-version-url]: https://github.com/conventional-changelog/standard-version

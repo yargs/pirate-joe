@@ -7,5 +7,5 @@ exports.describe = "to davy jones' locker with ye"
 exports.builder = {}
 
 exports.handler = function (argv) {
-  argv.respond(flip(argv.string.join(' ')))
+  argv.respond(flip(argv.strings.join(' ')))
 }

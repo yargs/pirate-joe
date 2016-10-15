@@ -28,7 +28,7 @@ app.post('/', function (req, res) {
     return res.sendStatus(401)
   }
 
-  // passes a respond function that that any yargs
+  // provides a respond function that any yargs
   // command can use to respond to Slack.
   context.respond = buildResponder(req.body.response_url)
 

@@ -137,23 +137,23 @@ parser.parse(req.body.text || '', context, (err, argv, output) => {
 })
 ```
 
-Again, by providing the `context.respond` method, we provide yargs' commands a
+Again, by providing the `context.respond` method, we give yargs' commands a
 mechanism for sending messages back to Slack.
 
 If any default output has been logged by yargs (perhaps `help` was executed), the
-`parse()` function itself dispatches this message back to Slack.
+`parse()` function itself dispatches the `output` back to Slack.
 
 ### Deploying Your Application
 
 The easiest way to get your slack-bot up and running is to create a Heroku application.
 A [wonderful interactive tutorial](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction) is
-available on this topic here.
+available on this topic.
 
 Once your application in in the wild, visit:
 
 `https://[your-slack].slack.com/apps/manage/custom-integrations`
 
-And configure a new [Slash Command](https://api.slack.com/slash-commands) for your application.
+and configure a new [Slash Command](https://api.slack.com/slash-commands) for your application.
 
 ## License
 

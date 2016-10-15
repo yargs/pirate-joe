@@ -59,6 +59,8 @@ variables that are important to us:
 
 * **req.body.token:** the shared secret between our application and
   and Slack. This allows us to verify that the post originated from Slack.
+  _Note: make sure that you keep this token a secret! don't put it under
+   version control._
 * **req.body.text:** the text that the user typed into the Slack channel.
 * **req.body.response_url:** the URL that your bot's response will be posted to.
 
@@ -126,7 +128,7 @@ exports.handler = function (argv) {
 }
 ```
 
-With the yargs instance configured, we now simply run  [`parse()`](https://github.com/yargs/yargs#parseargs-context-parsecallback) on each
+With the yargs instance configured, we now simply run [`parse()`](https://github.com/yargs/yargs#parseargs-context-parsecallback) on each
 of the inbound messages from Slack:
 
 ```js
@@ -149,7 +151,7 @@ The easiest way to get your slack-bot up and running is to create a Heroku appli
 A [wonderful interactive tutorial](https://devcenter.heroku.com/articles/getting-started-with-nodejs#introduction) is
 available on this topic.
 
-Once your application in in the wild, visit:
+Once your application is in the wild, visit:
 
 `https://[your-slack].slack.com/apps/manage/custom-integrations`
 

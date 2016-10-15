@@ -19,9 +19,9 @@ The [Pirate Joe sample project](https://github.com/yargs/pirate-joe/blob/master/
 ### Parsing Incoming Messages
 
 We've implemented Pirate Joe as a [Slack slash-command](https://api.slack.com/slash-commands). When
-a user types `/joe` in yargs' slack channel, a webhook is called on whatever URL you configure.
+a user types `/joe` in any of yargs' slack channels, a webhook is posted to whatever URL you configure.
 
-To process this webhook we created a minimal express application, with the the following `post` handler:
+To process this webhook we created a [minimal express application](https://expressjs.com/en/starter/hello-world.html), with the the following `post` handler:
 
 ```js
 const bodyParser = require('body-parser')
@@ -57,16 +57,16 @@ app.post('/', function (req, res) {
 `bodyParser` processes the inbound webhook from Slack and populates three
 variables that are important to us:
 
-* **req.body.token:** contains the shared secret between your application and
+* **req.body.token:** the shared secret between our application and
   and Slack. This allows us to verify that the post originated from Slack.
-* **req.body.text:** the text that the user typed into Slack.
+* **req.body.text:** the text that the user typed into the Slack channel.
 * **req.body.response_url:** the URL that your bot's response will be posted to.
 
 ### Responding to Slack
 
 Slack provides a `response_url` in their webhook for a bot to post their response to.
-Before passing a command to yargs for processing, we populate a helper function that
-allows commands to pass messages to Slack:
+Before passing `req.body.text` to yargs for processing, we populate a helper function that
+allows yargs commands to easily send messages back to Slack:
 
 ```js
 // returns a helper function for dispatching messages
@@ -92,7 +92,7 @@ function buildResponder (responseUrl) {
 ### Parsing the message with yargs
 
 Creating a yargs instance for processing chat messages is almost identical to how you
-would create a command line application:
+would configure it for a command line application:
 
 We begin by configuring the parser in the abstract:
 
@@ -123,7 +123,7 @@ exports.handler = function (argv) {
 }
 ```
 
-With yargs configured, we now simply run  [`parse()`](https://github.com/yargs/yargs#parseargs-context-parsecallback) on each
+With the yargs instance configured, we now simply run  [`parse()`](https://github.com/yargs/yargs#parseargs-context-parsecallback) on each
 of the inbound messages from Slack:
 
 ```js

@@ -36,7 +36,7 @@ app.post('/', function (req, res) {
     if (output) argv.respond(output)
   })
 
-  res.sendStatus(200)
+  res.send('')
 })
 
 // returns a helper function for dispatching messages
@@ -74,7 +74,7 @@ module.exports = function (cb, opts) {
 
   const server = app.listen(port, function (foo) {
     if (process.env.HEROKU) keepAlive()
-    logger.info('pirate joe bot listening on :' + port, 'beep boop')
+    logger.info('Pirate Joe bot listening on :' + port, 'beep boop')
     return cb(null, server)
   })
 }

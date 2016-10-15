@@ -26,7 +26,7 @@
     "express": "^4.14.0",
     "flip": "^1.0.0",
     "request": "^2.75.0",
-    "yargs": "^6.1.0-candidate"
+    "yargs": "^6.1.1-candidate"
   },
   "engines": {
     "node": "6.5.0"

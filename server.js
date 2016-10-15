@@ -1,8 +1,7 @@
-const express = require('express')
-const bodyParser = require('body-parser')
-
 if (process.env.NODE_ENV !== 'production') require('dotenv').config()
 
+const express = require('express')
+const bodyParser = require('body-parser')
 const app = express()
 const parser = require('yargs')
   .commandDir('commands')

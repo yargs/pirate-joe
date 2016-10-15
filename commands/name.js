@@ -21,6 +21,6 @@ exports.describe = "what's yer pirate name?"
 exports.builder = {}
 exports.handler = function (argv) {
   const prefix = prefixes[parseInt(Math.random() * prefixes.length)]
-  const suffix = suffixes[parseInt(Math.random() * prefixes.length)]
+  const suffix = suffixes[parseInt(Math.random() * suffixes.length)]
   argv.respond(`${argv.user_name} your pirate name is, "${prefix} ${argv.user_name} ${suffix}"`)
 }

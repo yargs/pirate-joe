@@ -1,4 +1,5 @@
 const flip = require('flip')
+const flipGuy = '(╯°□°）╯︵'
 
 exports.command = 'flip <strings...>'
 

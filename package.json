@@ -6,7 +6,8 @@
   "scripts": {
     "pretest": "standard",
     "test": "nyc mocha test.js",
-    "start": "./bin/pirate-joe.js"
+    "start": "./bin/pirate-joe.js",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -35,10 +36,12 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "coveralls": "^2.11.14",
     "mocha": "^3.1.2",
     "nock": "^8.1.0",
     "nyc": "^8.3.1",
-    "standard": "^8.4.0"
+    "standard": "^8.4.0",
+    "standard-version": "^3.0.0"
   },
   "files": [
     "bin/",

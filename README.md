@@ -92,7 +92,7 @@ function buildResponder (responseUrl) {
 ### Parsing the message with yargs
 
 Creating a yargs instance for processing chat messages is almost identical to how you
-would configure it for a command line application:
+would configure it for a command line application.
 
 We begin by configuring the parser in the abstract:
 
@@ -109,8 +109,11 @@ const parser = require('yargs')
 [`yargs.commandDir('commands')`](https://github.com/yargs/yargs#commanddirdirectory-opts) indicates that
 we should load all the chat commands located in `/commands`.
 
-We create a command module for each of our chat commands. Here's the module for translating English
-strings to Pirate strings:
+We create a command JavaScript file for each of our chat commands.
+
+Here's the module for translating English strings to Pirate strings:
+
+**pirate.js**
 
 ```js
 const pirateSpeak = require('pirate-speak')

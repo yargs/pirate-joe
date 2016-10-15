@@ -5,10 +5,12 @@ const request = require('request')
 // configure the yargs instance used
 // to parse chat messages.
 const parser = require('yargs')
+  .usage('/joe [command]')
   .commandDir('commands')
   .demand(1)
   .strict()
   .help()
+  .epilog("yargs' slack-bot Pirate Joe")
 
 const app = express()
 let logger = console

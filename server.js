@@ -22,7 +22,6 @@ app.post('/', function (req, res) {
       text: msg
     }))
   }
-  context.batman = Math.random() * 100
 
   parser.parse(req.body.text || '', context, (err, argv, output) => {
     if (output) argv.respond(output)

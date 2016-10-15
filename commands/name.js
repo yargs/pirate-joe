@@ -3,11 +3,7 @@ const suffixes = [
   'the Sour',
   'the Strong',
   'the Grumpy',
-  'the Stout',
-  '',
-  '',
-  '',
-  ''
+  'the Stout'
 ]
 
 const prefixes = [

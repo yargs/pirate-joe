@@ -4,11 +4,11 @@
 // to the originating slack channel.
 const nock = require('nock')
 const request = require('request')
-const startServer = require('./server')
+const startServer = require('../server')
 
 require('chai').should()
 
-describe('Pirate Joe', () => {
+describe('Pirate Joe Server', () => {
   let server = null
   // all tests run against an actual running
   // instance of the server.

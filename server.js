@@ -31,7 +31,6 @@ app.post('/', function (req, res) {
   // provides a respond function that any yargs
   // command can use to respond to Slack.
   context.respond = buildResponder(req.body.response_url)
-
   // run the yargs parser on the inbound slack command.
   parser.parse(req.body.text || '', context, (err, argv, output) => {
     if (err) logger.error(err.message)

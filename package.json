@@ -35,7 +35,7 @@
     "node": "6.5.0"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.0.2",
     "coveralls": "^2.11.14",
     "mocha": "^3.1.2",
     "nock": "^9.0.2",

@@ -32,7 +32,7 @@
     "yargs": "^6.1.1"
   },
   "engines": {
-    "node": "6.5.0"
+    "node": "10"
   },
   "devDependencies": {
     "chai": "^3.5.0",

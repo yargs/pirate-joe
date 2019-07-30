@@ -41,7 +41,7 @@
     "nock": "^9.0.2",
     "nyc": "^10.0.0",
     "standard": "^10.0.0",
-    "standard-version": "^3.0.0"
+    "standard-version": "^7.0.0"
   },
   "files": [
     "bin/",

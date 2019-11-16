@@ -29,7 +29,7 @@
     "flip": "^1.0.0",
     "pirate-speak": "^1.0.0",
     "request": "^2.75.0",
-    "yargs": "^7.0.1"
+    "yargs": "^15.0.1"
   },
   "engines": {
     "node": "6.5.0"
